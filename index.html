@@ -1,0 +1,84 @@
+<html>
+    <main class="entire-table">
+        <div class="panel">
+            <div class="title">Raya Stock '25</div>
+            {% for user in users%}
+                <div class="main-person">
+                        <div class="place">{{user[3] + 1}}.</div>
+                        <div>
+                            <img class="profile-pic" width="64" height="64" src="{{user[2]}}" alt="">
+                        </div>
+                        <div>
+                            <div class="person-name">
+                        {{user[0]}} 
+                        </div>
+                        <div class="money">
+                            $ {{user[1]}}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    <style>
+        .panel {
+            background-color: #22272D;
+            padding-inline: 20px;
+            padding-block: 30px;
+            border-radius: 25px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #4D525A;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .bar-blue {
+            background-color: #0CC4CD;
+            height: 2px;
+            margin-bottom: 8px;
+        }
+        .title {
+            font-weight: bold;
+            text-align: center;
+            font-size: larger;
+            padding-bottom: 16px;
+            opacity: 0.8;
+        }
+        .place {
+            padding-right: 8px;
+            opacity: 0.7;
+            font-style: italic;
+            padding-left: 10px;
+        }
+        .profile-pic {
+            border-radius: 100%;
+            padding: 2px;
+            border-color: #0CC4CD;
+            border-width: 2px;
+            border-style:solid;
+        }
+        .entire-table {
+            padding-inline: 45px;
+            padding-block: 30px;
+            background-color: #181D23;
+            color: #EFEFEF;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight:bold;
+            width: 560px;
+        }
+        .main-person {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .person-name {
+            font-weight: bolder;
+            font-size: 24px;
+        }
+        .money {
+            color: #0CC4CD;
+        }
+    </style>
+</html>
