@@ -68,7 +68,7 @@ def create_leaderboard_img ():
     if bbox:
         trimmed_img = img.crop(bbox)
         ratio = trimmed_img.size[0] / trimmed_img.size[1] 
-        length = 320
+        length = 480
         trimmed_img = trimmed_img.resize((int(length * ratio), length), Image.Resampling.LANCZOS)
         trimmed_img.save("processed_img.png")
         return trimmed_img
